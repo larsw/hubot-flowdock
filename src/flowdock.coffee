@@ -30,7 +30,7 @@ class Flowdock extends Adapter
       return unless message.event == 'message'
       author =
         id: message.user
-        name: @bot.brain.userForId(message.user).name
+        name: @robot.brain.userForId(message.user).name
         flow: message.flow
       return if @robot.name.toLowerCase() == author.name.toLowerCase()
       # Reformat leading @mention name to be like "name: message" which is
